@@ -1,0 +1,186 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bree Serif', sans-serif;
+}
+body{
+    background-color: rgb(200, 214, 226);
+}
+.wrapper{
+    margin: 50px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill, 265px);
+}
+.wrapper li{
+    height: 200px;
+    background-color: #fff;
+    border-radius: 5px;
+    list-style-type: none;
+    padding: 15px 20px 20px;
+}
+.add-box, .icon,.bottom_content, .settings .menu li, .popup, header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.add-box{
+     justify-content: center; 
+     flex-direction: column;
+     cursor: pointer;
+}
+.icon{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    justify-content: center;
+    border: 2px dashed rgb(24, 193, 245);
+}
+.add-box p{
+    color: rgb(39, 86, 100);
+    font-weight: 500;
+    margin-top: 20px;
+} .wrapper .note{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.note .details{
+    max-height: 165px;
+    overflow-y: auto;
+}
+.note p{
+    font-size: 22px;
+    font-weight: 500;
+}
+.note span{
+    display: block;
+    margin-top: 5px;
+    font-size: 16px;
+    color:rgb(36, 32, 27) ;
+}
+.note .bottom_content{
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgb(78, 201, 218);
+}
+.bottom_content span{
+    color: rgb(50, 80, 47);
+    font-size: 14px;
+}
+.bottom_content .settings{
+    cursor: pointer;
+    position: relative;
+}
+.settings .menu{
+    position: absolute;
+    bottom: 5px;  
+    right: -5px;
+    padding: 2px 0;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: transform 0.4s ease;
+}
+.settings.show .menu{
+    transform: scale(1);
+}
+.settings .menu li{
+    height: 7px;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 17px 15px;
+    border-radius: 0;
+    justify-content: flex-start;
+}
+.menu li:hover{
+        background: #f5f5f5;
+}
+.menu li i{
+    padding-right: 8px;
+}
+.popup-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.20);
+}
+.popup-box .popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    max-width: 400px;
+    width: 100%;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+}
+.popup-box, .popup-box .popup{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease;
+}
+.popup-box.show,.popup-box.show .popup {
+    opacity: 1;
+    pointer-events: all;
+}
+.popup .content{
+    width: calc(100% - 15px);
+    background: #fff;
+    border-radius: 5px;
+}
+.popup .content header{
+    padding: 15px 25px;
+    border-bottom: 2px solid #ccc;
+}
+.content header p{
+    font-size: 20px;
+    font-weight: 500;
+}
+.content header i{
+    color: #443131;
+    cursor: pointer;
+    font-style: 24px;
+}
+.content form{
+    margin: 15px 25px 35px;
+
+}
+.content form .row{
+    margin-bottom: 20px;
+}
+form .row label{
+    display: block;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+.content form :where(input, textarea){
+    width: 100%;
+    height: auto;
+    outline: none;
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 10px 15px;
+    border: 1px solid #999;
+}
+.content form textarea{
+    height: 150px;
+    resize: none;
+}
+.content form button{
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #1395ff;
+}
