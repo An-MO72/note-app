@@ -7,4 +7,4 @@ I created a sample note-taking application using HTML, CSS, and JS.
 
 * this one is for updating an exicting note :
 
-![note-app-update](https://github.com/AnnouriM/note-app/assets/112013669/33d1795e-bc3c-40a6-8bad-ff0ced954cb4)
+![note-app-update](https://github.com/AnnouriM/note-app/assets/112013669/c8f0c864-faa5-4336-91a7-30d15de7abdd)
